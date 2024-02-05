@@ -1,0 +1,3133 @@
+#include <iostream>
+
+using namespace std;
+
+void up(char upcorners[], int upedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+    int intbuffer,intbuffer1;
+    
+	charbuffer=upcorners[14];
+	upcorners[14]=upcorners[16];
+	upcorners[16]=upcorners[5];
+	upcorners[5]=upcorners[23];
+	upcorners[23]=charbuffer;
+	charbuffer1=upcorners[17];
+	upcorners[17]=upcorners[7];
+	upcorners[7]=upcorners[22];
+	upcorners[22]=upcorners[12];
+	upcorners[12]=charbuffer1;
+	charbuffer2=upcorners[8];
+	upcorners[8]=upcorners[10];
+	upcorners[10]=upcorners[11];
+	upcorners[11]=upcorners[9];
+	upcorners[9]=charbuffer2;
+	
+	intbuffer=upedges[13];
+	upedges[13]=upedges[16];
+	upedges[16]=upedges[6];
+	upedges[6]=upedges[23];
+	upedges[23]=intbuffer;
+	intbuffer1=upedges[8];
+	upedges[8]=upedges[9];
+	upedges[9]=upedges[11];
+	upedges[11]=upedges[10];
+	upedges[10]=intbuffer1;
+}
+
+void opup(char oupcorners[], int oupedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=oupcorners[7];
+	oupcorners[7]=oupcorners[17];
+	oupcorners[17]=oupcorners[12];
+	oupcorners[12]=oupcorners[22];
+	oupcorners[22]=charbuffer;
+	charbuffer1=oupcorners[16];
+	oupcorners[16]=oupcorners[14];
+	oupcorners[14]=oupcorners[23];
+	oupcorners[23]=oupcorners[5];
+	oupcorners[5]=charbuffer1;
+	charbuffer2=oupcorners[8];
+	oupcorners[8]=oupcorners[9];
+	oupcorners[9]=oupcorners[11];
+	oupcorners[11]=oupcorners[10];
+	oupcorners[10]=charbuffer2;
+	
+	intbuffer=oupedges[6];
+	oupedges[6]=oupedges[16];
+	oupedges[16]=oupedges[13];
+	oupedges[13]=oupedges[23];
+	oupedges[23]=intbuffer;
+	intbuffer1=oupedges[8];
+	oupedges[8]=oupedges[10];
+	oupedges[10]=oupedges[11];
+	oupedges[11]=oupedges[9];
+	oupedges[9]=intbuffer1;
+	
+}
+
+void down(char dcorners[], int dedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=dcorners[6];
+	dcorners[6]=dcorners[19];
+	dcorners[19]=dcorners[13];
+	dcorners[13]=dcorners[20];
+	dcorners[20]=charbuffer;
+	charbuffer1=dcorners[18];
+	dcorners[18]=dcorners[15];
+	dcorners[15]=dcorners[21];
+	dcorners[21]=dcorners[4];
+	dcorners[4]=charbuffer1;
+	charbuffer2=dcorners[0];
+	dcorners[0]=dcorners[2];
+	dcorners[2]=dcorners[3];
+	dcorners[3]=dcorners[1];
+	dcorners[1]=charbuffer2;
+	
+	intbuffer=dedges[5];
+	dedges[5]=dedges[19];
+	dedges[19]=dedges[14];
+	dedges[14]=dedges[20];
+	dedges[20]=intbuffer;
+	intbuffer1=dedges[0];
+	dedges[0]=dedges[1];
+	dedges[1]=dedges[3];
+	dedges[3]=dedges[2];
+	dedges[2]=intbuffer1;
+}
+
+void opdown(char odcorners[], int odedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=odcorners[18];
+	odcorners[18]=odcorners[4];
+	odcorners[4]=odcorners[21];
+	odcorners[21]=odcorners[15];
+	odcorners[15]=charbuffer;
+	charbuffer1=odcorners[19];
+	odcorners[19]=odcorners[6];
+	odcorners[6]=odcorners[20];
+	odcorners[20]=odcorners[13];
+	odcorners[13]=charbuffer1;
+	charbuffer2=odcorners[0];
+	odcorners[0]=odcorners[1];
+	odcorners[1]=odcorners[3];
+	odcorners[3]=odcorners[2];
+	odcorners[2]=charbuffer2;
+		
+	intbuffer=odedges[14];
+	odedges[14]=odedges[19];
+	odedges[19]=odedges[5];
+	odedges[5]=odedges[20];
+	odedges[20]=intbuffer;
+	intbuffer1=odedges[0];
+	odedges[0]=odedges[2];
+	odedges[2]=odedges[3];
+	odedges[3]=odedges[1];
+	odedges[1]=intbuffer1;
+}
+
+void right(char rcorners[], int redges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=rcorners[10];
+	rcorners[10]=rcorners[17];
+	rcorners[17]=rcorners[1];
+	rcorners[1]=rcorners[21];
+	rcorners[21]=charbuffer;
+	charbuffer1=rcorners[19];
+	rcorners[19]=rcorners[3];
+	rcorners[3]=rcorners[23];
+	rcorners[23]=rcorners[8];
+	rcorners[8]=charbuffer1;
+	charbuffer2=rcorners[4];
+	rcorners[4]=rcorners[6];
+	rcorners[6]=rcorners[7];
+	rcorners[7]=rcorners[5];
+	rcorners[5]=charbuffer2;
+	
+	intbuffer=redges[9];
+	redges[9]=redges[18];
+	redges[18]=redges[2];
+	redges[2]=redges[22];
+	redges[22]=intbuffer;
+	intbuffer1=redges[4];
+	redges[4]=redges[5];
+	redges[5]=redges[7];
+	redges[7]=redges[6];
+	redges[6]=intbuffer1;
+}
+
+void opright(char orcorners[], int oredges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=orcorners[19];
+	orcorners[19]=orcorners[8];
+	orcorners[8]=orcorners[23];
+	orcorners[23]=orcorners[3];
+	orcorners[3]=charbuffer;
+	charbuffer1=orcorners[17];
+	orcorners[17]=orcorners[10];
+	orcorners[10]=orcorners[21];
+	orcorners[21]=orcorners[1];
+	orcorners[1]=charbuffer1;
+	charbuffer2=orcorners[4];
+	orcorners[4]=orcorners[5];
+	orcorners[5]=orcorners[7];
+	orcorners[7]=orcorners[6];
+	orcorners[6]=charbuffer2;
+	
+	intbuffer=oredges[18];
+	oredges[18]=oredges[9];
+	oredges[9]=oredges[22];
+	oredges[22]=oredges[2];
+	oredges[2]=intbuffer;
+	intbuffer1=oredges[4];
+	oredges[4]=oredges[6];
+	oredges[6]=oredges[7];
+	oredges[7]=oredges[5];
+	oredges[5]=intbuffer1;
+}
+
+void left(char lcorners[], int ledges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=lcorners[16];
+	lcorners[16]=lcorners[11];
+	lcorners[11]=lcorners[20];
+	lcorners[20]=lcorners[0];
+	lcorners[0]=charbuffer;
+	charbuffer1=lcorners[18];
+	lcorners[18]=lcorners[9];
+	lcorners[9]=lcorners[22];
+	lcorners[22]=lcorners[2];
+	lcorners[2]=charbuffer1;
+	charbuffer2=lcorners[12];
+	lcorners[12]=lcorners[14];
+	lcorners[14]=lcorners[15];
+	lcorners[15]=lcorners[13];
+	lcorners[13]=charbuffer2;
+	
+	intbuffer=ledges[17];
+	ledges[17]=ledges[10];
+	ledges[10]=ledges[21];
+	ledges[21]=ledges[1];
+	ledges[1]=intbuffer;
+	intbuffer1=ledges[12];
+	ledges[12]=ledges[13];
+	ledges[13]=ledges[15];
+	ledges[15]=ledges[14];
+	ledges[14]=intbuffer1;
+}
+
+void opleft(char olcorners[], int oledges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=olcorners[18];
+	olcorners[18]=olcorners[2];
+	olcorners[2]=olcorners[22];
+	olcorners[22]=olcorners[9];
+	olcorners[9]=charbuffer;
+	charbuffer1=olcorners[16];
+	olcorners[16]=olcorners[0];
+	olcorners[0]=olcorners[20];
+	olcorners[20]=olcorners[11];
+	olcorners[11]=charbuffer1;
+	charbuffer2=olcorners[12];
+	olcorners[12]=olcorners[13];
+	olcorners[13]=olcorners[15];
+	olcorners[15]=olcorners[14];
+	olcorners[14]=charbuffer2;
+	
+	intbuffer=oledges[17];
+	oledges[17]=oledges[1];
+	oledges[1]=oledges[21];
+	oledges[21]=oledges[10];
+	oledges[10]=intbuffer;
+	intbuffer1=oledges[12];
+	oledges[12]=oledges[14];
+	oledges[14]=oledges[15];
+	oledges[15]=oledges[13];
+	oledges[13]=intbuffer1;
+}
+
+void front(char fcorners[], int fedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=fcorners[16];
+	fcorners[16]=fcorners[18];
+	fcorners[18]=fcorners[19];
+	fcorners[19]=fcorners[17];
+	fcorners[17]=charbuffer;
+	charbuffer1=fcorners[5];
+	fcorners[5]=fcorners[9];
+	fcorners[9]=fcorners[13];
+	fcorners[13]=fcorners[1];
+	fcorners[1]=charbuffer1;
+	charbuffer2=fcorners[4];
+	fcorners[4]=fcorners[8];
+	fcorners[8]=fcorners[12];
+	fcorners[12]=fcorners[0];
+	fcorners[0]=charbuffer2;
+	
+	intbuffer=fedges[16];
+	fedges[16]=fedges[17];
+	fedges[17]=fedges[19];
+	fedges[19]=fedges[18];
+	fedges[18]=intbuffer;
+	intbuffer1=fedges[8];
+	fedges[8]=fedges[12];
+	fedges[12]=fedges[0];
+	fedges[0]=fedges[4];
+	fedges[4]=intbuffer1;
+}
+
+void opfront(char ofcorners[], int ofedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer, intbuffer1;
+	
+	charbuffer=ofcorners[16];
+	ofcorners[16]=ofcorners[17];
+	ofcorners[17]=ofcorners[19];
+	ofcorners[19]=ofcorners[18];
+	ofcorners[18]=charbuffer;
+	charbuffer1=ofcorners[9];
+	ofcorners[9]=ofcorners[5];
+	ofcorners[5]=ofcorners[1];
+	ofcorners[1]=ofcorners[13];
+	ofcorners[13]=charbuffer1;
+	charbuffer2=ofcorners[8];
+	ofcorners[8]=ofcorners[4];
+	ofcorners[4]=ofcorners[0];
+	ofcorners[0]=ofcorners[12];
+	ofcorners[12]=charbuffer2;
+	
+	intbuffer=ofedges[19];
+	ofedges[19]=ofedges[17];
+	ofedges[17]=ofedges[16];
+	ofedges[16]=ofedges[18];
+	ofedges[18]=intbuffer;
+	intbuffer1=ofedges[4];
+	ofedges[4]=ofedges[0];
+	ofedges[0]=ofedges[12];
+	ofedges[12]=ofedges[8];
+	ofedges[8]=intbuffer1;
+}
+
+void back(char bcorners[], int bedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=bcorners[23];
+	bcorners[23]=bcorners[21];
+	bcorners[21]=bcorners[20];
+	bcorners[20]=bcorners[22];
+	bcorners[22]=charbuffer;
+	charbuffer1=bcorners[7];
+	bcorners[7]=bcorners[3];
+	bcorners[3]=bcorners[15];
+	bcorners[15]=bcorners[11];
+	bcorners[11]=charbuffer1;
+	charbuffer2=bcorners[6];
+	bcorners[6]=bcorners[2];
+	bcorners[2]=bcorners[14];
+	bcorners[14]=bcorners[10];
+	bcorners[10]=charbuffer2;
+	
+	intbuffer=bedges[7];
+	bedges[7]=bedges[3];
+	bedges[3]=bedges[15];
+	bedges[15]=bedges[11];
+	bedges[11]=intbuffer;
+	intbuffer1=bedges[23];
+	bedges[23]=bedges[22];
+	bedges[22]=bedges[20];
+	bedges[20]=bedges[21];
+	bedges[21]=intbuffer1;
+}
+
+void opback(char obcorners[], int obedges[]){
+	char charbuffer,charbuffer1,charbuffer2;
+	int intbuffer,intbuffer1;
+	
+	charbuffer=obcorners[23];
+	obcorners[23]=obcorners[22];
+	obcorners[22]=obcorners[20];
+	obcorners[20]=obcorners[21];
+	obcorners[21]=charbuffer;
+	charbuffer1=obcorners[7];
+	obcorners[7]=obcorners[11];
+	obcorners[11]=obcorners[15];
+	obcorners[15]=obcorners[3];
+	obcorners[3]=charbuffer1;
+	charbuffer2=obcorners[6];
+	obcorners[6]=obcorners[10];
+	obcorners[10]=obcorners[14];
+	obcorners[14]=obcorners[2];
+	obcorners[2]=charbuffer2;
+	
+	intbuffer=obedges[7];
+	obedges[7]=obedges[11];
+	obedges[11]=obedges[15];
+	obedges[15]=obedges[3];
+	obedges[3]=intbuffer;
+	intbuffer1=obedges[23];
+	obedges[23]=obedges[21];
+	obedges[21]=obedges[20];
+	obedges[20]=obedges[22];
+	obedges[22]=intbuffer1;
+}
+
+void first_step(char scorners[], int sedges[]){
+	int intbuffer,thesi;
+	for(int i=0; i<=23; i++){
+		intbuffer=sedges[i]; 
+		if(intbuffer==1){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==19){
+	cout<<"\nD R F";
+	down(scorners, sedges);
+	right(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==1){
+	cout<<"\nD";
+	down(scorners, sedges);
+    }
+	else if(thesi==14){
+	cout<<"\nL' F'";
+	opleft(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+	else if(thesi==2){
+	cout<<"\nD'";
+	opdown(scorners, sedges);
+    }
+	else if(thesi==5){
+	cout<<"\nR F";
+	right(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==3){
+	cout<<"\nD2";
+	down(scorners, sedges);
+	down(scorners, sedges);
+    }
+	else if(thesi==20){
+	cout<<"\nD' R F";
+	opdown(scorners, sedges);
+	right(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==12){
+	cout<<"\nF'";
+	opfront(scorners, sedges);
+    }
+	else if(thesi==17){
+	cout<<"\nL D";
+	left(scorners, sedges);
+	down(scorners, sedges);
+    }
+	else if(thesi==4){
+	cout<<"\nF";
+	front(scorners, sedges);
+    }
+	else if(thesi==18){
+	cout<<"\nR' D'";
+	opright(scorners, sedges);
+	opdown(scorners, sedges);
+    }
+	else if(thesi==8){
+	cout<<"\nF2";
+	front(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==16){
+	cout<<"\nU' R' F";
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==9){
+	cout<<"\nR2 D'";
+	right(scorners, sedges);
+	right(scorners, sedges);
+	opdown(scorners, sedges);
+    }
+	else if(thesi==6){
+	cout<<"\nR' F";
+	opright(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==22){
+	cout<<"\nR D'";
+	right(scorners, sedges);
+	opdown(scorners, sedges);
+    }
+	else if(thesi==7){
+	cout<<"\nR2 F";
+	right(scorners, sedges);
+	right(scorners, sedges);
+	front(scorners, sedges);
+    }
+	else if(thesi==10){
+	cout<<"\nL2 D";
+	left(scorners, sedges);
+	left(scorners, sedges);
+	down(scorners, sedges);
+    }
+	else if(thesi==13){
+	cout<<"\nL F'";
+	left(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+	else if(thesi==21){
+	cout<<"\nL' D";
+	opleft(scorners, sedges);
+	down(scorners, sedges);
+    }
+	else if(thesi==15){
+	cout<<"\nL2 F'";
+	left(scorners, sedges);
+	left(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+	else if(thesi==11){
+	cout<<"\nB2 D2";
+	back(scorners, sedges);
+	back(scorners, sedges);
+	down(scorners, sedges);
+	down(scorners, sedges);
+    }
+	else if(thesi==23){
+	cout<<"\nB' R D'";
+	opback(scorners, sedges);
+	right(scorners, sedges);
+	opdown(scorners, sedges);
+    }
+    
+    
+	for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==2){
+		   thesi=i;
+		   break;
+		}		   
+	}
+    if(thesi==14){
+	cout<<"\nL B' U' L2";
+	left(scorners, sedges);
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==3){
+	cout<<"\nB2 U' L2";
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==20){
+	cout<<"\nB' L'";
+	opback(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==2){
+	cout<<"\nR2 U2 L2";
+	right(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+	else if(thesi==5){
+	cout<<"\nR2 U' B L'";
+	right(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==17){
+	cout<<"\nL";
+	left(scorners, sedges);
+    }
+    else if(thesi==12){
+	cout<<"\nL' U B L'";
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==21){
+	cout<<"\nL'";
+	opleft(scorners, sedges);
+    }
+    else if(thesi==15){
+	cout<<"\nB' U' L2";
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nL2";
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU B L'";
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==18){
+	cout<<"\nR U2 L2";
+	right(scorners, sedges);
+	up(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==4){
+	cout<<"\nR U' B L'";
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==7){
+	cout<<"\nB U' L2";
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==22){
+	cout<<"\nB2 L'";
+	back(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nU' B L'";
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nU2 L2";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==11){
+	cout<<"\nU L2";
+	up(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nB L'";
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU L2";
+	up(scorners, sedges);
+	left(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nU2 B L'";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    
+    
+    for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==3){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==5){
+	cout<<"\nR2 U' B' R";
+	right(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==3){
+	cout<<"\nB2 U R2";
+	back(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==20){
+	cout<<"\nB R";
+	back(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==18){
+	cout<<"\nR'";
+	opright(scorners, sedges);
+    }
+    else if(thesi==4){
+	cout<<"\nR U' B' R";
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nU2 B' R";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	opback(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU' R2";
+	opup(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==12){
+	cout<<"\nF U F' U2 R2";
+	front(scorners, sedges);
+	up(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==17){
+	cout<<"\nL' U' L U' R2";
+	opleft(scorners, sedges);
+	opup(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==22){
+	cout<<"\nR";
+	right(scorners, sedges);
+    }
+    else if(thesi==7){
+	cout<<"\nB U R2";
+	back(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nR2";
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nU' B' R";
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nU2 R2";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU B' R";
+	up(scorners, sedges);
+	opback(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==21){
+	cout<<"\nB2 R";
+	back(scorners, sedges);
+	back(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==15){
+	cout<<"\nB' U R2";
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==11){
+	cout<<"\nU R2";
+	up(scorners, sedges);
+	right(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nB' R";
+	opback(scorners, sedges);
+	right(scorners, sedges);
+    }
+    
+    
+    for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==4){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==20){
+	cout<<"\nB2 L U' L' B";
+	back(scorners, sedges);
+	back(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==15){
+	cout<<"\nB";
+	back(scorners, sedges);
+    }
+    else if(thesi==21){
+	cout<<"\nB' L U' L' B";
+	opback(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==7){
+	cout<<"\nB'";
+	opback(scorners, sedges);
+    }
+    else if(thesi==22){
+	cout<<"\nR' U' R' B2";
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+	else if(thesi==11){
+	cout<<"\nB2";
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nR' U R B'";
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nU' B2";
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nU R' U' R B'";
+	up(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	right(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==18){
+	cout<<"\nR U' R' B2";
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==4){
+	cout<<"\nF' U' F U' B2";
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU2 B2";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nR' U' R B'";
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	right(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==17){
+	cout<<"\nL' U L B2";
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nU B2";
+	up(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU L U' L' B";
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==12){
+	cout<<"\nF U F' U B2";
+	front(scorners, sedges);
+	up(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	back(scorners, sedges);
+    }
+    
+}
+
+void second_step(char scorners[], int sedges[]){
+    int intbuffer,thesi;
+    char charbuffer;
+	for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='A'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==18){
+	   cout<<"\nF U F' U2 L' U L";
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+	}
+	else if(thesi==13){
+	   cout<<"\nL' U' L U2 F U' F'";
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+	else if(thesi==16){
+	   cout<<"\nU' L' U L";
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==12){
+	   cout<<"\nU F U' F'";
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==9){
+	   cout<<"\nU2 F U F' L' U' L";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==2){
+	   cout<<"\nL U L' U' F U' F'";
+	   left(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==15){
+	   cout<<"\nL U L' U L' U L";
+	   left(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==20){
+	   cout<<"\nB' U' B U F U' F'";
+	   opback(scorners, sedges);
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==14){
+	   cout<<"\nU2 L' U L";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==22){
+	   cout<<"\nF U' F'";
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==11){
+	   cout<<"\nU L' U' L F U F'";
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==1){
+	   cout<<"\nF' U' F U L' U L";
+	   opfront(scorners, sedges);
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==4){
+	   cout<<"\nR U R' U' L' U L";
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==19){
+	   cout<<"\nF' U' F U' F U' F'";
+	   opfront(scorners, sedges);
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==5){
+	   cout<<"\nL' U L";
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==17){
+	   cout<<"\nU2 F U' F'";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==8){
+	   cout<<"\nU' F U F' L' U' L";
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==3){
+	   cout<<"\nR' U' R U2 L' U L";
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==21){
+	   cout<<"\nB U B' L' U L";
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==6){
+	   cout<<"\nR' U' R F U' F'";
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==23){
+	   cout<<"\nL' U2 L";
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    else if(thesi==7){
+	   cout<<"\nU' F U' F'";
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+    }
+    else if(thesi==10){
+	   cout<<"\nF U F' L' U' L";
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==18){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==12){
+	cout<<"\nL' U L U F U' F' U L' U L U F U' F'";
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nU F U' F' U' L' U L";
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==11){
+	cout<<"\nF U' F' U' L' U L";
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU2 F U' F' U' L' U L";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nU' F U' F' U' L' U L";
+	opup(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU2 L' U L U F U' F'";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nU L' U L U F U' F'";
+	up(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nL' U L U F U' F'";
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nU' L' U L U F U' F'";
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==18){
+	cout<<"\nR U' R' F U' F' U' L' U L";
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==4){
+	cout<<"\nR U' R' U L' U L U F U' F'";
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==7){
+	cout<<"\nR' U R U' L' U L U F U' F'";
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    else if(thesi==22){
+	cout<<"\nR' U R U2 F U' F' U' L' U L";
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==15){
+	cout<<"\nB' F U' B F' U' L' U L";
+	opback(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+    }
+    else if(thesi==21){
+	cout<<"\nB' U B L' U L U F U' F'";
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='B'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==4){
+	   cout<<"\nR U R' U2 F' U F";
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==19){
+	   cout<<"\nF' U' F U2 R U' R'";
+	   opfront(scorners, sedges);
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==8){
+	   cout<<"\nR U2 R' U2 F' U F";
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==17){
+	   cout<<"\nU R U' R'";
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==5){
+	   cout<<"\nU' F' U F";
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==3){
+	   cout<<"\nB U2 B' R U' R'";
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==6){
+	   cout<<"\nR' U2 R2 U' R'";
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==21){
+	   cout<<"\nF' B U F B'";
+	   opfront(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   opback(scorners, sedges);
+    }
+    else if(thesi==7){
+	   cout<<"\nU2 R U' R'";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==23){
+	   cout<<"\nF' U F";
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==10){
+	   cout<<"\nR' U R2 U' R'";
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==9){
+	   cout<<"\nU' R U' R' U F' U F";
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==16){
+	   cout<<"\nU2 F' U F";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==12){
+	   cout<<"\nR U' R'";
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==2){
+	   cout<<"\nL R U2 R' L'";
+	   left(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==15){
+	   cout<<"\nL U L' F' U F";
+	   left(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==20){
+	   cout<<"\nB' U' B R U' R'";
+	   opback(scorners, sedges);
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    else if(thesi==14){
+	   cout<<"\nU F' U F";
+	   up(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+    }
+    else if(thesi==11){
+	   cout<<"\nB' U2 B R U' R'";
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   right(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==5){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==18){
+	cout<<"\nF' U F U R U' R' U F' U F U R U' R'";
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU R U' R' U' F' U F";
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nU2 R U' R' U' F' U F";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nR U' R' U' F' U F";
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+    }
+    else if(thesi==11){
+	cout<<"\nU' R U' R' U' F' U F";
+	opup(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nU2 F' U F U R U' R'";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+    }
+    else if(thesi==7){
+	cout<<"\nB U' B' R U' R' U' F' U F";
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+    front(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nF' U F U R U' R'";
+	opfront(scorners, sedges);
+	opup(scorners, sedges);
+	front(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU F' U F U R U' R'";
+	up(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+    }
+    else if(thesi==15){
+	cout<<"\nB' U' B R U' R' U' F' U F";
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+    }
+    else if(thesi==21){
+	cout<<"\nL U' L' U R U' R' U' F' U F";
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nU' F' U F U R U' R'";
+	opup(scorners, sedges);
+	opfront(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+    }
+    else if(thesi==22){
+	cout<<"\nF' B U F B' U R U' R'";
+	opfront(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	front(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='C'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==20){
+	   cout<<"\nB' U' B U2 L U' L'";
+	   opback(scorners, sedges);
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==15){
+	   cout<<"\nL U L' U2 B' U B";
+	   left(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==11){
+	   cout<<"\nB' U B U' L U' L'";
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==22){
+	   cout<<"\nU L U' L'";
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==14){
+	   cout<<"\nU' B' U B";
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==9){
+	   cout<<"\nU2 B U' B2 U B";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==12){
+	   cout<<"\nU2 L U' L'";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==16){
+	   cout<<"\nB' U B";
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==8){
+	   cout<<"\nU' B U' B2 U B";
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==17){
+	   cout<<"\nU' L U' L'";
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==5){
+	   cout<<"\nU B' U B";
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==10){
+	   cout<<"\nB U' B2 U B";
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==23){
+	   cout<<"\nU2 B' U B";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    else if(thesi==7){
+	   cout<<"\nL U' L'";
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==3){
+	   cout<<"\nB U B' U' L U' L'";
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   opup(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+    }
+    else if(thesi==6){
+	   cout<<"\nL R' U' L' R";
+	   left(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opleft(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==21){
+	   cout<<"\nB U2 B2 U B";
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==16){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==21){
+	cout<<"\nL U' L' U B' U2 B U2 B' U B";
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	up(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	up(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==11){
+	cout<<"\nU L U' L' U' B' U B";
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nU2 L U' L' U' B' U B";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU' L U' L' U' B' U B";
+	opup(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nL U' L' U' B' U B";
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nU2 B' U B U L U' L'";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU' B' U B U L U' L'";
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nB' U B U L U' L'";
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nU B' U B U L U' L'";
+	up(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    else if(thesi==22){
+	cout<<"\nL R' U' L' R U' B' U B";
+	left(scorners, sedges);
+	opright(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+	right(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+    }
+    else if(thesi==7){
+	cout<<"\nR' U R B' U B U L U' L'";
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	up(scorners, sedges);
+	left(scorners, sedges);
+	opup(scorners, sedges);
+	opleft(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='D'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==6){
+	   cout<<"\nR' U' R U2 B U' B'";
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+    }
+    else if(thesi==21){
+	   cout<<"\nB U B' U2 R' U R";
+	   back(scorners, sedges);
+	   up(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==10){
+	   cout<<"\nB U' B' U R' U R";
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==11){
+	   cout<<"\nU B U' B' U R' U R";
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==9){
+	   cout<<"\nU2 B U' B' U R' U R";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==8){
+	   cout<<"\nU' B U' B' U R' U R";
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==7){
+	   cout<<"\nU B U' B'";
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+    }
+    else if(thesi==17){
+	   cout<<"\nB U' B'";
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+    }
+    else if(thesi==12){
+	   cout<<"\nU' B U' B'";
+	   opup(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+    }
+    else if(thesi==22){
+	   cout<<"\nU2 B U' B'";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   back(scorners, sedges);
+	   opup(scorners, sedges);
+	   opback(scorners, sedges);
+    }
+    else if(thesi==5){
+	   cout<<"\nU2 R' U R";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==16){
+	   cout<<"\nU R' U R";
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==14){
+	   cout<<"\nR' U R";
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    else if(thesi==5){
+	   cout<<"\nU' R' U R";
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   right(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		 intbuffer=sedges[i]; 
+		if(intbuffer==8){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi==22){
+	cout<<"\nR' U R U B U' B' U R' U R U B U' B'";
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	up(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==6){
+	cout<<"\nU B U' B' U' R' U R";
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==16){
+	cout<<"\nB U' B' U' R' U R";
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==13){
+	cout<<"\nU' B U' B' U' R' U R";
+	opup(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==23){
+	cout<<"\nU2 B U' B' U' R' U R";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+    }
+    else if(thesi==9){
+	cout<<"\nU2 R' U R U B U' B'";
+	up(scorners, sedges);
+	up(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==11){
+	cout<<"\nU' R' U R U B U' B'";
+	opup(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==10){
+	cout<<"\nR' U R U B U' B'";
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+    }
+    else if(thesi==8){
+	cout<<"\nU R' U R U B U' B'";
+	up(scorners, sedges);
+	opright(scorners, sedges);
+	up(scorners, sedges);
+	right(scorners, sedges);
+	up(scorners, sedges);
+	back(scorners, sedges);
+	opup(scorners, sedges);
+	opback(scorners, sedges);
+    }   
+}
+
+
+void third_step(char scorners[], int sedges[]){
+    int check[]={0, 0, 0, 0};
+	if((sedges[8]!=9) && (sedges[8]!=10) && (sedges[8]!=11) && (sedges[8]!=12))
+		check[0]=1;		   
+    if((sedges[9]!=9) && (sedges[9]!=10) && (sedges[9]!=11) && (sedges[9]!=12))
+		check[1]=1;
+    if((sedges[10]!=9) && (sedges[10]!=10) && (sedges[10]!=11) && (sedges[10]!=12))
+		check[2]=1;
+	if((sedges[11]!=9) && (sedges[11]!=10) && (sedges[11]!=11) && (sedges[11]!=12))
+		check[3]=1;
+	if((check[0]==0) && (check[1]!=0) && (check[2]==0) && (check[3]!=0)){
+	   cout<<"\nU F R U R' U' R U R' U' F'";
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+	else if((check[0]!=0) && (check[1]!=0) && (check[2]!=0) && (check[3]!=0)){
+	   cout<<"\nF R U R' U' F' U2 F R U R' U' R U R' U' F'";
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+    else if((check[0]!=0) && (check[1]==0) && (check[2]!=0) && (check[3]==0)){
+	   cout<<"\nU' F R U R' U' R U R' U' F'";
+	   opup(scorners, sedges);
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==0) && (check[2]!=0) && (check[3]!=0)){
+	   cout<<"\nU2 F R U R' U' R U R' U' F'";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+	else if((check[0]!=0) && (check[1]!=0) && (check[2]==0) && (check[3]==0)){
+	   cout<<"\nF R U R' U' R U R' U' F'";
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+	else if((check[0]!=0) && (check[1]==0) && (check[2]==0) && (check[3]!=0)){
+	   cout<<"\nF R U R' U' F'";
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]!=0) && (check[2]!=0) && (check[3]==0)){
+	   cout<<"\nU F R U R' U' F'";
+	   up(scorners, sedges);
+	   front(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   opup(scorners, sedges);
+	   opfront(scorners, sedges);
+	}
+    
+}
+void fourth_step(char scorners[], int sedges[]){
+    int thesi;
+    char charbuffer;
+	for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='Q'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if((thesi==17) || (thesi==5) || (thesi==8)){
+	   cout<<"\nU";
+	   up(scorners, sedges);
+    }
+    else if((thesi==7) || (thesi==23) || (thesi==10)){
+	   cout<<"\nU2";
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+    }
+    else if((thesi==22) || (thesi==11) || (thesi==14)){
+	   cout<<"\nU'";
+	   opup(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='W'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if((thesi==17) || (thesi==5) || (thesi==8)){
+	   cout<<"\nU R' U L U' R U L' U2";
+	   up(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+    }
+    else if((thesi==10) || (thesi==7) || (thesi==23)){
+	   cout<<"\nR' U L U' R U L' U";
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   up(scorners, sedges);
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='H'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if((thesi==17) || (thesi==5) || (thesi==8)){
+	   cout<<"\nL U' R' U L' U' R U2";
+	   left(scorners, sedges);
+	   opup(scorners, sedges);
+	   opright(scorners, sedges);
+	   up(scorners, sedges);
+	   opleft(scorners, sedges);
+	   opup(scorners, sedges);
+	   right(scorners, sedges);
+	   up(scorners, sedges);
+	   up(scorners, sedges);
+    }
+}
+void fifth_step(char scorners[], int sedges[]){
+    int thesi, check[]={0, 0, 0};
+    char charbuffer;
+	for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='J'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi!=9){
+	   check[0]=thesi;
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='L'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi!=11){
+	   check[1]=thesi;
+    }
+    for(int i=0; i<=23; i++){
+		charbuffer=scorners[i]; 
+		if(charbuffer=='K'){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi!=10){
+	   check[2]=thesi;
+    }
+	if((check[0]==12) && (check[1]==14) && (check[2]==7)){
+		cout<<"\nR U R' U R U' R' U R U2 R'";
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==22) && (check[2]==7)){
+		cout<<"\nF U' B' U F' U' B2 U' F' U B' U' F";
+		front(scorners, sedges);
+		opup(scorners, sedges);
+		opback(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+		opup(scorners, sedges);
+		back(scorners, sedges);
+		back(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+		up(scorners, sedges);
+		opback(scorners, sedges);
+		opup(scorners, sedges);
+		front(scorners, sedges);
+	}
+	else if((check[0]==12) && (check[1]==14) && (check[2]==23)){
+		cout<<"\nU2 F U' B' U F' U' B2 U' F' U B' U' F U2";
+		up(scorners, sedges);
+		up(scorners, sedges);
+		front(scorners, sedges);
+		opup(scorners, sedges);
+		opback(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+		opup(scorners, sedges);
+		back(scorners, sedges);
+		back(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+		up(scorners, sedges);
+		opback(scorners, sedges);
+		opup(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==22) && (check[2]==23)){
+		cout<<"\nU' R U R' U R U' R' U R U2 R' U";
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==0) && (check[2]==23)){
+		cout<<"\nL' U' L U' L' U2 L R U R' U R U2 R'";
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==14) && (check[2]==7)){
+		cout<<"\nU' R U R' U R U2 R' L' U' L U' L' U2 L U";
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==0) && (check[2]==7)){
+		cout<<"\nR U2 R' U' R U' R' F U F' U F U2 F'";
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+		up(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==22) && (check[2]==23)){
+		cout<<"\nB' U2 B U B' U B F U2 F' U' F U' F'";
+		opback(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		back(scorners, sedges);
+		up(scorners, sedges);
+		opback(scorners, sedges);
+		up(scorners, sedges);
+		back(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+		opup(scorners, sedges);
+		front(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==22) && (check[2]==0)){
+		cout<<"\nL U' R' U L' U' F' L' F R F' L F U";
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+		opleft(scorners, sedges);
+		front(scorners, sedges);
+		right(scorners, sedges);
+		opfront(scorners, sedges);
+		left(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==14) && (check[2]==0)){
+		cout<<"\nR U' L' U R' U' B' R' B L B' R B U";
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		opback(scorners, sedges);
+		opright(scorners, sedges);
+		back(scorners, sedges);
+		left(scorners, sedges);
+		opback(scorners, sedges);
+		right(scorners, sedges);
+		back(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==14) && (check[2]==23)){
+		cout<<"\nL U2 L' U' L U' L' U2";
+		left(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==0) && (check[1]==22) && (check[2]==7)){
+		cout<<"\nR U R' U R U2 R' U2";
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==14) && (check[2]==7)){
+		cout<<"\nL U' R' U L' U' R2 U' L' U R' U' L";
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+	}
+	else if((check[0]==12) && (check[1]==22) && (check[2]==23)){
+		cout<<"\nR U' L' U R' U' L2 U' R' U L' U' R";
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		right(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==22) && (check[2]==0)){
+		cout<<"\nR U R' U R U2 R' L' U' L U' L' U2 L";
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+	}
+	else if((check[0]==12) && (check[1]==0) && (check[2]==0)){
+		cout<<"\nU R U R' U R U2 R' L' U' L U' L' U2 L U'";
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+	}
+	else if((check[0]==12) && (check[1]==14) && (check[2]==0)){
+		cout<<"\nL' U2 L U L' U L R U2 R' U' R U' R'";
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+	    right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==0) && (check[2]==0)){
+		cout<<"\nU L' U2 L U L' U L R U2 R' U' R U' R' U'";
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+	    right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+	}
+	else if((check[0]==12) && (check[1]==0) && (check[2]==23)){
+		cout<<"\nU L U' R' U L' U' F' L' F R F' L F ";
+		up(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+		opleft(scorners, sedges);
+		front(scorners, sedges);
+		right(scorners, sedges);
+		opfront(scorners, sedges);
+		left(scorners, sedges);
+		front(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==0) && (check[2]==7)){
+		cout<<"\nU' L U' R' U L' U' F' L' F R F' L F U2";
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+		opleft(scorners, sedges);
+		front(scorners, sedges);
+		right(scorners, sedges);
+		opfront(scorners, sedges);
+		left(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+	}
+	else if((check[0]==16) && (check[1]==14) && (check[2]==23)){
+		cout<<"\nL U' L U' L' U2 L U2";
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		up(scorners, sedges);	
+		up(scorners, sedges);	
+	}
+	else if((check[0]==16) && (check[1]==14) && (check[2]==0)){
+		cout<<"\nR U2 R' U' R U' R' U2";
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);		
+	}
+	else if((check[0]==16) && (check[1]==0) && (check[2]==23)){
+		cout<<"\nU R U2 R' U' R U' R' U";
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);	
+	}
+	else if((check[0]==12) && (check[1]==22) && (check[2]==7)){
+		cout<<"\nU R U R' U R U2 R' U";
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);	
+	}
+	else if((check[0]==12) && (check[1]==22) && (check[2]==0)){
+		cout<<"\nU2 R U R' U R U2 R'";
+		up(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);		
+	}
+	else if((check[0]==12) && (check[1]==0) && (check[2]==7)){
+		cout<<"\nU' R U R' U R U2 R' U'";
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opright(scorners, sedges);	
+		opup(scorners, sedges);	
+	}	
+}
+void sixth_step(char scorners[], int sedges[]){
+    int intbuffer, thesi, check[]={0, 0, 0};
+	for(int i=0; i<=23; i++){
+		intbuffer=sedges[i]; 
+		if(intbuffer==17){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi!=16){
+	   check[0]=thesi;
+    }
+    for(int i=0; i<=23; i++){
+		intbuffer=sedges[i]; 
+		if(intbuffer==14){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi!=13){
+	   check[1]=thesi;
+    }
+    for(int i=0; i<=23; i++){
+		intbuffer=sedges[i]; 
+		if(intbuffer==24){
+		   thesi=i;
+		   break;
+		}		   
+	}
+	if(thesi!=23){
+	   check[2]=thesi;
+    }
+    if((check[0]==0) && (check[1]==6) && (check[2]==13)){
+		cout<<"\nB2 U L' R B2 L R' U B2";
+		back(scorners, sedges);
+		back(scorners, sedges);
+		up(scorners, sedges);
+		opleft(scorners, sedges);
+		right(scorners, sedges);
+		back(scorners, sedges);
+		back(scorners, sedges);
+		left(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		back(scorners, sedges);
+		back(scorners, sedges);		
+	}
+	else if((check[0]==0) && (check[1]==23) && (check[2]==6)){
+		cout<<"\nB2 U' L' R B2 L R' U' B2";
+		back(scorners, sedges);
+		back(scorners, sedges);
+		opup(scorners, sedges);
+		opleft(scorners, sedges);
+		right(scorners, sedges);
+		back(scorners, sedges);
+		back(scorners, sedges);
+		left(scorners, sedges);
+		opright(scorners, sedges);
+		opup(scorners, sedges);
+		back(scorners, sedges);
+		back(scorners, sedges);		
+	}
+	else if((check[0]==6) && (check[1]==16) && (check[2]==0)){
+		cout<<"\nF2 U L R' F2 L' R U F2";
+		front(scorners, sedges);
+		front(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		opright(scorners, sedges);
+		front(scorners, sedges);
+		front(scorners, sedges);
+		opleft(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		front(scorners, sedges);
+		front(scorners, sedges);		
+	}
+	else if((check[0]==13) && (check[1]==6) && (check[2]==0)){
+		cout<<"\nF2 U' L R' F2 L' R U' F2";
+		front(scorners, sedges);
+		front(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opright(scorners, sedges);
+		front(scorners, sedges);
+		front(scorners, sedges);
+		opleft(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		front(scorners, sedges);
+		front(scorners, sedges);		
+	}
+	else if((check[0]==6) && (check[1]==0) && (check[2]==16)){
+		cout<<"\nR2 U F B' R2 F' B U R2";
+		right(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		front(scorners, sedges);
+		opback(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		opfront(scorners, sedges);
+		back(scorners, sedges);
+		up(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);		
+	}
+	else if((check[0]==23) && (check[1]==0) && (check[2]==6)){
+		cout<<"\nR2 U' F B' R2 F' B U' R2";
+		right(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		front(scorners, sedges);
+		opback(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		opfront(scorners, sedges);
+		back(scorners, sedges);
+		opup(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);		
+	}
+	else if((check[0]==23) && (check[1]==16) && (check[2]==13)){
+		cout<<"\nL2 U F' B L2 F B' U L2";
+		left(scorners, sedges);
+		left(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+		back(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);
+		front(scorners, sedges);
+		opback(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);		
+	}
+	else if((check[0]==13) && (check[1]==23) && (check[2]==16)){
+		cout<<"\nL2 U' F' B L2 F B' U' L2";
+		left(scorners, sedges);
+		left(scorners, sedges);
+		opup(scorners, sedges);
+		opfront(scorners, sedges);
+		back(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);
+		front(scorners, sedges);
+		opback(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);		
+	}
+	else if((check[0]==23) && (check[1]==6) && (check[2]==16)){
+		cout<<"\nL' R' U2 L R F B U2 F' B'";
+		opleft(scorners, sedges);
+		opright(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		front(scorners, sedges);
+		back(scorners, sedges);
+		up(scorners, sedges);
+		up(scorners, sedges);
+		opfront(scorners, sedges);
+		opback(scorners, sedges);		
+	}
+	else if((check[0]==6) && (check[1]==23) && (check[2]==13)){
+		cout<<"\nL2 R2 D L2 R2 U L R' F2 L2 R2 B2 L R' U2";
+		left(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		down(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		up(scorners, sedges);
+		left(scorners, sedges);
+		opright(scorners, sedges);		
+		front(scorners, sedges);	
+		front(scorners, sedges);	
+		left(scorners, sedges);	
+		left(scorners, sedges);	
+		right(scorners, sedges);	
+		right(scorners, sedges);	
+		back(scorners, sedges);	
+		back(scorners, sedges);	
+		left(scorners, sedges);	
+		opright(scorners, sedges);	
+		up(scorners, sedges);	
+		up(scorners, sedges);	
+	}
+	else if((check[0]==13) && (check[1]==16) && (check[2]==6)){
+		cout<<"\nL2 R2 D' L2 R2 U' L R' F2 L2 R2 B2 L R' U2";
+		left(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		opdown(scorners, sedges);
+		left(scorners, sedges);
+		left(scorners, sedges);
+		right(scorners, sedges);
+		right(scorners, sedges);
+		opup(scorners, sedges);
+		left(scorners, sedges);
+		opright(scorners, sedges);		
+		front(scorners, sedges);	
+		front(scorners, sedges);	
+		left(scorners, sedges);	
+		left(scorners, sedges);	
+		right(scorners, sedges);	
+		right(scorners, sedges);	
+		back(scorners, sedges);	
+		back(scorners, sedges);	
+		left(scorners, sedges);	
+		opright(scorners, sedges);	
+		up(scorners, sedges);	
+		up(scorners, sedges);	
+	}
+}
+int main(){
+//we can think of the cube, as two arrays one for its corners and one for its edges
+	char corners[]={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X'};
+	int edges[]={1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24};
+
+//random moves shuffle	
+	left(corners, edges);
+    	right(corners, edges);
+    	up(corners, edges);
+	up(corners, edges);
+    	down(corners, edges);
+    	front(corners, edges);
+    	opright(corners, edges);
+    	up(corners, edges);
+    	down(corners, edges);
+    	front(corners, edges);
+    	opright(corners, edges);
+    	down(corners, edges);
+    	front(corners, edges);
+    	up(corners, edges);
+	 	
+//solution steps	 
+	first_step(corners, edges);
+	cout<<"\n";
+	second_step(corners, edges);
+	cout<<"\n";
+	third_step(corners, edges);
+	cout<<"\n";
+	fourth_step(corners, edges);
+	cout<<"\n";
+	fifth_step(corners, edges);
+	cout<<"\n";
+	sixth_step(corners, edges);
+	cout<<"\n";
+    
+//use 2 for loops to print the state of the cube, after it is solved
+	cout<<"\n";
+	for(int i=0; i<=23; i++)
+		cout<<edges[i]<<" ";
+	cout<<"\n";
+	for(int i=0; i<=23; i++)
+		cout<<corners[i]<<" ";
+	
+	system("pause"); 
+	return 0;
+}
